@@ -11,7 +11,7 @@ func main() {
 	app := fiber.New()
 
 	app.Post("/", func(c *fiber.Ctx) error {
-		fmt.Println(c.Body())
+		fmt.Println(string(c.Body()))
 		return nil
 	})
 
