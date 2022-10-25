@@ -26,6 +26,7 @@ func main() {
 	app := fiber.New()
 
 	app.Post("/", func(c *fiber.Ctx) error {
+		fmt.Println(string(c.Body()))
 		var text Text
 		if err := json.Unmarshal(c.Body(), &text); err != nil {
 			log.Println(err)
